@@ -9,11 +9,13 @@ export default function Header(props) {
       {props.isLoggedIn ? (
         <>
           <p>
-            <Link href="/">Home</Link>
+            <Link className={styles.nav} href="/">Home</Link>
+            <Link className={styles.nav} href="/search">Exercise Search</Link>
+            <Link className={styles.nav} href="/favorites">Saved Exercises</Link>
           </p>
           <div className={styles.container}>
-            <p>Welcome, {props.username}!</p>
-            <p onClick={logout} style={{ cursor: "pointer" }}>
+            <p className={styles.name}>Welcome, {props.username}!</p>
+            <p className={styles.nav} onClick={logout} style={{ cursor: "pointer" }}>
               Logout
             </p>
           </div>
@@ -21,10 +23,10 @@ export default function Header(props) {
       ) : (
         <>
           <p>
-            <Link href="/">Home</Link>
+            <Link className={styles.nav} href="/">Home</Link>
           </p>
           <p>
-            <Link href="/login">Login</Link>
+            <Link className={styles.nav} href="/login">Login</Link>
           </p>
         </>
       )}

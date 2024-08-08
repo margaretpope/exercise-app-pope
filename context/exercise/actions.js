@@ -1,0 +1,1 @@
+export const SEARCH_EXERCISES = 'SEARCH_EXERCISES'
