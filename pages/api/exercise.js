@@ -17,7 +17,7 @@ export default withIronSessionApiRoute (
                 }
                 return res.status(200).json({exercise: addExercise})
             case 'DELETE':
-                const deleteExercise = await db.book.remove(user.id, req.body.id)
+                const deleteExercise = await db.exercise.remove(user.id, req.body.id)
                 if (!deleteExercise) {
                     req.session.destroy()
                     return res.status(401).end()

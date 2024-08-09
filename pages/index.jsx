@@ -30,7 +30,7 @@ export default function Home(props) {
     <div className={styles.container}>
       <Head>
         <title>FitQuest</title>
-        <meta name="description" content="Exercise App" />
+        <meta name="description" content="FitQuest" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
