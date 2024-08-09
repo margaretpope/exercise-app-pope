@@ -1,7 +1,6 @@
 import {useRouter} from "next/router"
 import { withIronSessionSsr } from "iron-session/next";
 import Head from "next/head";
-import Link from "next/link";
 import sessionOptions from "../config/session";
 import Header from "../components/header"
 import {useState} from "react"
@@ -52,8 +51,8 @@ export default function Search(props) {
             </Head>
             <Header isLoggedIn={props.isLoggedIn}/>
             <main>
-                <h1>Exercise Search</h1>
-                <form onSubmit={handleSubmit}>
+                <h1 className={styles.title}>Exercise Search</h1>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <label>Search for exercises by muscle group.</label>
                     <input
                         type="text"
@@ -66,7 +65,7 @@ export default function Search(props) {
                 {
                     props.searchResults?.length
                     ? <section><ExerciseList exercise = {props.searchResults}/></section>
-                    : <p>No results.</p>
+                    : <p className={styles.description}>No results.</p>
                 }
             </main>
         </>
