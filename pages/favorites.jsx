@@ -40,7 +40,7 @@ export default function Favorites(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Check out your saved exercises!
+        Your saved exercises!
         </h1>
 
         <div className={styles.grid}>
